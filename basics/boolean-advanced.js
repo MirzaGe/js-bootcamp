@@ -1,5 +1,4 @@
-let isAccountLocked = true
-
+let isAccountLocked = false
 if (isAccountLocked) {
     console.log('Is account locked')
 } else {
