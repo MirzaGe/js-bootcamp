@@ -1,5 +1,5 @@
 let firstName = 'Mirza'
 let lastName = 'Baig'
-let fulName = firstName 
+let fulName = `${firstName} ${lastName}`
 
 console.log(fulName)
