@@ -10,3 +10,7 @@ let convertFarenheitToCelcius = function(fahrenheit) {
     
     console.log(tempOne)
     console.log(tempTwo)
+
+    // bjbfkwnfke
+    // vegr
+    // rvrvbbrb
