@@ -1,10 +1,13 @@
 let restaurant = {
     name: 'Silver Spoon',
     guestCapacity: 75,
-    guedtCount: 0,
+    guestCount: 73,
     checkAvailability: function (partySize) {
-        console.log(partySize)
+        let seatsLeft = this.guestCapacity - this.guestCount
+        return partySize <= seatsLeft
     }
 }
 
-restaurant.checkAvailability(4)
+let status = restaurant.checkAvailability(1)
+
+console.log(status)
