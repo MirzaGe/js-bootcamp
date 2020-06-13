@@ -1,11 +1,26 @@
-const notes = ['Note 1','Note 2','Note5']
+const notes = [{
+    title: 'My next trip',
+    body: 'I would like to go to Spain'
+}, {
+    title: 'Habbits to work on',
+    body: 'Exercise. Eating a bit better.'
+}, {
+    title: 'Office modification',
+    body: 'Get a new seat'
+}]
 
-// notes.forEach(function(nm){
-//     console.log(nm)
-// })
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
+}
 
-// console.log(notes.length)
-// console.log(notes)
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
 
-
-console.log(notes.indexOf('note2'))
+const note = findNote(notes, 'some other office modification')
+console.log(note)
