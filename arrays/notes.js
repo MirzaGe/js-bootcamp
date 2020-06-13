@@ -22,5 +22,5 @@ const findNote = function (notes, noteTitle) {
 //     return notes[index]
 // }
 
-const note = findNote(notes, 'some other office modification')
+const note = findNote(notes, 'office modification')
 console.log(note)
