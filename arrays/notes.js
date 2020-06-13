@@ -7,7 +7,5 @@ const notes = ['Note 1','Note 2','Note5']
 // console.log(notes.length)
 // console.log(notes)
 
-for(let count =0; count < notes.length;
-    count++){
-        console.log(notes[count])
-    }
+
+console.log(notes.indexOf('note2'))
