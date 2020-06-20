@@ -30,3 +30,31 @@ todos.forEach(function (todo){
 
 })
 
+document.querySelector('button').addEventListener
+('click',function(e){
+    console.log('Add a new Todo...')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
