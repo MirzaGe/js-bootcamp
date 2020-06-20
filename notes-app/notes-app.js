@@ -9,6 +9,12 @@ const notes = [{
   body: 'Get a new seat'
 }]
 
+const filters = {
+  searchText: ''
+}
+
+const renderNotes = function(notes, filters)
+
 document.querySelector('#remove-all').addEventListener('click',function(e){
  e.target.textContent = 'The button was clicked'
 })
