@@ -8,6 +8,14 @@ const notes = [{
     title: 'Office modification',
     body: 'Get a new seat'
 }]
+const filter = {
+    searchText: ''
+}
+const renderNotes = function (notes,filter){
+    const filteredNotes = notes.filter(function(){
+        
+    })
+}
 
 const findNote = function (notes, noteTitle) {
     return notes.find(function (note, index) {
