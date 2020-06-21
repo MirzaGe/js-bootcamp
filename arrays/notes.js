@@ -12,8 +12,9 @@ const filter = {
     searchText: ''
 }
 const renderNotes = function (notes,filter){
-    const filteredNotes = notes.filter(function(){
-        
+    const filteredNotes = notes.filter(function(note){
+        return note.title.toLowerCase().includes(filters.searchText)
+
     })
 }
 
