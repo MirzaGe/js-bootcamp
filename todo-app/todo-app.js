@@ -15,6 +15,12 @@ const todos= [{
     completed: true
 }]
 
+const filters = {
+    searchText:''
+}
+
+
+
 const incompleteTodos= todos.filter(function (todo){
     return !todo.completed
 })
