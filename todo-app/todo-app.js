@@ -46,6 +46,10 @@ console.log(e.target.value)
 
 })
 
+document.querySelector('#search-text').addEventListener('input',function(e){
+    filters.searchText = e.target.value
+})
+
 
 
 
