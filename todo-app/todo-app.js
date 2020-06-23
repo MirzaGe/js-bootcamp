@@ -1,52 +1,29 @@
-let notes = []
+let todos = getSavedTodos()
 
 const filters = {
-    searchText: ''
+    searchText: '',
+    hideCompleted: false
 }
 
-// Check for existing saved data
-const notesJSON = localStorage.getItem('notes')
-
-if (notesJSON !== null) {
-    notes = JSON.parse(notesJSON)
-}
-
-const renderNotes = function (notes, filters) {
-    const filteredNotes = notes.filter(function (note) {
-        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
-    })
-
-    document.querySelector('#notes').innerHTML = ''
-    
-    filteredNotes.forEach(function (note) {
-        const noteEl = document.createElement('p')
-
-        if (note.title.length > 0) {
-            noteEl.textContent = note.title
-        } else {
-            noteEl.textContent = 'Unnamed note'
-        }
-        
-        document.querySelector('#notes').appendChild(noteEl)
-    })
-}
-
-renderNotes(notes, filters)
-
-document.querySelector('#create-note').addEventListener('click', function (e) {
-    notes.push({
-        title: '',
-        body: ''
-    })
-    localStorage.setItem('notes', JSON.stringify(notes))
-    renderNotes(notes, filters)
-})
+renderTodos(todos, filters)
 
 document.querySelector('#search-text').addEventListener('input', function (e) {
     filters.searchText = e.target.value
-    renderNotes(notes, filters)
+    renderTodos(todos, filters)
 })
 
-document.querySelector('#filter-by').addEventListener('change', function (e) {
-    console.log(e.target.value)
+document.querySelector('#new-todo').addEventListener('submit', function (e) {
+    e.preventDefault()
+    todos.push({
+        text: e.target.elements.text.value,
+        completed: false
+    })
+    saveTodos(todos)
+    renderTodos(todos, filters)
+    e.target.elements.text.value = ''
+})
+
+document.querySelector('#hide-completed').addEventListener('change', function (e) {
+    filters.hideCompleted = e.target.checked
+    renderTodos(todos, filters)
 })
