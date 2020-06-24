@@ -13,3 +13,9 @@ const people = [{
     name: 'jess',
     age:22
 }]
+
+const under30 = people.filter(function(person){
+return person.age < 30
+
+})
+console.log(under30) 
