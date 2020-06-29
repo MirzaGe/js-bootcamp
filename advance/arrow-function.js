@@ -21,3 +21,4 @@ return person.age < 30
 console.log(under30) 
 
 const under22= people.filter((person) => person.age <= 22 )
+/
