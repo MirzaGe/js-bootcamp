@@ -1,2 +1,2 @@
 # js-bootcamp
- Learning Modern JavaScript 
+ Learning Modern JavaScript ES6
