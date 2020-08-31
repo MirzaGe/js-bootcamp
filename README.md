@@ -4,5 +4,6 @@ Andrew Mead data structures
 # error handling
 # promises
 # async await
+# Maps
 
 
